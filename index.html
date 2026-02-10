@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/script.js" defer></script>
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+  </header>
+
+  <main>
+
+    <div id="container">
+
+      <section id="input-section">
+
+        <fieldset>
+          <legend>Cuenta</legend>
+            <div class="input-icon-wrapper">
+              <img src="./images/icon-dollar.svg" alt="dollar icon" class="input-icon" />
+              <label for="bill-amount" class="sr-only">Bill Amount</label>
+              <input min="0" max="10000" type="number" id="bill-amount" placeholder="0" />
+            </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>% de Propina</legend>
+            <ul id="tip-wrapper">
+              <li>
+                <button class="tip-btn" type="button">5%</button>
+              </li>
+              <li>
+                <button class="tip-btn" type="button">10%</button>
+              </li>
+              <li>
+                <button class="tip-btn" type="button">15%</button>
+              </li>
+              <li>
+                <button class="tip-btn" type="button">25%</button>
+              </li>
+              <li>
+                <button class="tip-btn" type="button">50%</button>
+              </li>
+              <li>
+                <label for="custom-tip" class="sr-only">Custom Tip</label>
+                <input type="number" id="custom-tip" placeholder="Custom" />
+              </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+          <div class="label-row">
+            <legend>Cantidad de Personas</legend>
+            <span id="people-error" class="error hidden">No puede ser cero</span>
+          </div>
+
+          <div class="input-icon-wrapper" id="redline">
+            <img src="./images/icon-person.svg" alt="person icon" class="input-icon" />
+            <label for="people-number" class="sr-only">Cantidad de personas</label>
+            <input min="1" max="100" type="number" id="people-number" placeholder="0">
+          </div>
+        </fieldset>
+
+      </section>
+
+      <section id="output-section">
+        <div class="output-line">
+          <div>
+            <p>Cantidad de Propina</p>
+            <span class="sub-label">/ persona</span>
+          </div>
+          <div>
+            <span id="tip-amount">$0.00</span>
+          </div>
+        </div>
+        <div class="output-line">
+          <div>
+            <p>Total</p>
+            <span class="sub-label">/ persona</span>
+          </div>
+          <div>
+            <span id="total-amount">$0.00</span>
+          </div>
+        </div>
+
+        <button class="active ready" id="reset-button" type="button" disabled>Reiniciar</button>
+
+      </section>
+
+    </div>
+
+  </main>
+  
+</body>
+</html>
